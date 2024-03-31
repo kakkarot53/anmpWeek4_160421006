@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/car_navigration"
+    app:startDestination="@id/carListFragment">
+    <fragment
+        android:id="@+id/carListFragment"
+        android:name="com.ubaya.anmpweek4.view.CarListFragment"
+        android:label="fragment_car_list"
+        tools:layout="@layout/fragment_car_list" />
+</navigation>
