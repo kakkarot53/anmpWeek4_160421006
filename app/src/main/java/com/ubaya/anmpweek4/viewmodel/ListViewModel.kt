@@ -57,7 +57,7 @@ class ListViewModel(application: Application): AndroidViewModel(application) {
         carLoadErrorLD.value = false
 
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://10.0.2.2/cars/cars.json"
+        val url = "http://adv.jitusolution.com/student.php"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
