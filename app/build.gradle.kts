@@ -2,11 +2,17 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "com.ubaya.anmpweek4"
     compileSdk = 34
+
+    buildFeatures{
+        viewBinding=true
+        dataBinding=true
+    }
 
     defaultConfig {
         applicationId = "com.ubaya.anmpweek4"

@@ -12,6 +12,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.ubaya.anmpweek4.R
 import com.ubaya.anmpweek4.databinding.FragmentStudentDetailBinding
+import com.ubaya.anmpweek4.model.Student
 import com.ubaya.anmpweek4.viewmodel.DetailViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
@@ -37,13 +38,15 @@ class StudentDetailFragment : Fragment() {
         detailViewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
         detailViewModel.fetch(id)
 
+//        binding.student = detailViewModel.fetch(id)
         detailViewModel.studentLD.observe(viewLifecycleOwner) { student ->
             binding.apply {
-                txtID.setText(student.id)
-                txtName.setText(student.name)
-                txtBoD.setText(student.bod)
-                txtPhone.setText(student.phone)
-
+                binding.student = student
+//                txtID.setText(student.id)
+//                txtName.setText(student.name)
+//                txtBoD.setText(student.bod)
+//                txtPhone.setText(student.phone)
+//
                 val picasso = Picasso.Builder(imageView2.context)
                 picasso.build().load(student.photoUrl).into(imageView2)
             }
